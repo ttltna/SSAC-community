@@ -88,8 +88,12 @@ module.exports = (env, argv) => {
                 template: `${TEMPLATE_PATH}/home.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'login.html',
-                template: `${TEMPLATE_PATH}/login.html`,
+                filename: 'join/join.html',
+                template: `${TEMPLATE_PATH}/join/join.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'join/join_succeed.html',
+                template: `${TEMPLATE_PATH}/join/join_succeed.html`,
             })
             // new BundleAnalyzerPlugin()
         ],
