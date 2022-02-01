@@ -84,8 +84,13 @@ module.exports = (env, argv) => {
             new Dotenv(),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
-            new HtmlWebpackPlugin({ template: `${TEMPLATE_PATH}/home.html` }),
-
+            new HtmlWebpackPlugin({
+                template: `${TEMPLATE_PATH}/home.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'login.html',
+                template: `${TEMPLATE_PATH}/login.html`,
+            })
             // new BundleAnalyzerPlugin()
         ],
         optimization: {
