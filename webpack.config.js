@@ -88,8 +88,8 @@ module.exports = (env, argv) => {
                 template: `${TEMPLATE_PATH}/home.html`,
             }),
             new HtmlWebpackPlugin({
-                filename: 'found.html',
-                template: `${TEMPLATE_PATH}/Found/found.html`,
+                filename: 'found/found.html',
+                template: `${TEMPLATE_PATH}/found/found.html`,
             })
             // new BundleAnalyzerPlugin()
         ],
