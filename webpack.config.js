@@ -87,9 +87,9 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: `${TEMPLATE_PATH}/home.html`,
             }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'login.html',
-                template: `${TEMPLATE_PATH}/login.html`,
+            new HtmlWebpackPlugin({
+                filename: 'found.html',
+                template: `${TEMPLATE_PATH}/Found/found.html`,
             })
             // new BundleAnalyzerPlugin()
         ],
