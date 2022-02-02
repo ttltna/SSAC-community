@@ -7,9 +7,48 @@
     <title>scss || join</title>
 </head>
 <body>
-    <h1 class="hello">Hello! user</h1>
-    <a href="./join_succeed.html">
-        <button>join!</button>
-    </a>
+    <div class="joinMemberShip">
+        <h1 id="join">회원가입</h1>
+        <span>*는 필수사항 입니다.</span>
+    </div>
+    <hr>
+    <div class="userInfo">
+        <form>
+            <div class="userId">
+                <span>*</span>아이디:
+                <input type="text" required placeholder="아이디를 입력해주세요.">
+                <button>중복확인</button>
+            </div>
+            <div class="userPw">
+                <span>*</span>비밀번호:
+                <input type="password" required placeholder="비밀번호를 입력해주세요." minlength="6" maxlength="20">
+            </div>
+            <div class="userPwCheck">
+                <span>*</span>비밀번호&nbsp;확인:
+                <input type="password" required placeholder="비밀번호 확인">
+            </div>
+            <div class="userEmail">
+                <span>*</span>이메일:
+                <input type="email" placeholder="이메일을 입력해주세요.">
+            </div>
+            <div class="userName">
+                <span>*</span>닉네임&nbsp;(별명):
+                <input type="text" placeholder="">
+            </div>
+            <div class="userCampus">
+                <p>캠퍼스:</p>
+                <select name="campus" id="campus">
+                    <option value="select">==캠퍼스 선택==</option>
+                    <option value="yeongdeungpo">SeSac영등포</option>
+                    <option value="geumcheon">SeSac금천</option>
+                    <option value="waiting">수강대기</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="buttons">
+        <a href="/"><button>뒤로가기</button></a>
+        <a href="./join_succeed.html"><button>회원가입</button></a>
+    </div>
 </body>
 </html>
