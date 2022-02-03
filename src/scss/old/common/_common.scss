@@ -1,0 +1,28 @@
+// 버튼, 아이콘, 햄버거 버튼 클릭시 나오는 목차, input태그(border-radius), 기본 레이아웃(양쪽 마진)
+.basic_btn{ //기본 버튼
+    border: none;
+    border-radius: 50px;
+}
+
+.ham_btn{ //햄버거 버튼
+
+}
+
+.title_icon{ //타이틀로 돌아가는 아이콘
+//이미지
+}
+
+.undo_icon{ //뒤로 돌아가는 아이콘
+//이미지
+}
+
+.basic_input{ //모든 input의 틀
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    padding: 5px 5px;
+}
+
+.inner{ //layout_margin(left,right)
+    width: calc(100% - 434px);
+}
