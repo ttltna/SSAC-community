@@ -85,6 +85,15 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
             new HtmlWebpackPlugin({
+                template: `${TEMPLATE_PATH}/login.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'loginsan/loginsan.html',
+                template: `${TEMPLATE_PATH}/loginsan/loginsan.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'loginsan/santest.html',
+                template: `${TEMPLATE_PATH}/loginsan/santest.html`,
                 template: `${TEMPLATE_PATH}/home.html`,
             })
             new HtmlWebpackPlugin({  // Also generate a test.html
