@@ -1,7 +1,19 @@
+@import "./mypage/mypage.scss";
+@import "./mypage/reset.scss";
 @import "../scss/join/home.scss";
 @import "../scss/join/join.scss";
 @import "../scss/join/join_succeed.scss";
 @import './Found/found.scss';
+div,
+h1,
+span,
+a,
+p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 h1 {
     color: teal;
     background-color: orange;

@@ -88,6 +88,14 @@ module.exports = (env, argv) => {
                 template: `${TEMPLATE_PATH}/home.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/mypage.html',
+                template: `${TEMPLATE_PATH}/mypage/mypage.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/changemypage.html',
+                template: `${TEMPLATE_PATH}/mypage/changemypage.html`,
+            }),
+            new HtmlWebpackPlugin({
                 filename: 'join/join.html',
                 template: `${TEMPLATE_PATH}/join/join.html`,
             }),
