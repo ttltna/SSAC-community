@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
     // devServer
     // devtool: 'eval-cheap-source-map', 
     return {
-        mode: "development",
+        mode: "production",
         devServer: {
             // contentBase:'./dist', // 서버 시작 시 static 파일 경로 지정
             port: 8891,
