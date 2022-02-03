@@ -85,6 +85,14 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
             new HtmlWebpackPlugin({
+                // template: `${TEMPLATE_PATH}/home.html`,
+                template: `${TEMPLATE_PATH}/mypage/mypage.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: '/login/login.html',
+                template: `${TEMPLATE_PATH}/login/login.html`,
+            }),            // new BundleAnalyzerPlugin()
+            new HtmlWebpackPlugin({  // Also generate a test.html
                 template: `${TEMPLATE_PATH}/login.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
@@ -94,8 +102,8 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({  // Also generate a test.html
                 filename: 'loginsan/santest.html',
                 template: `${TEMPLATE_PATH}/loginsan/santest.html`,
-                template: `${TEMPLATE_PATH}/home.html`,
-            })
+                // template: `${TEMPLATE_PATH}/home.html`,
+            }),
             new HtmlWebpackPlugin({  // Also generate a test.html
                 filename: 'mypage/mypage.html',
                 template: `${TEMPLATE_PATH}/mypage/mypage.html`,

@@ -1,3 +1,5 @@
+@import "./main/main.scss";
+@import "./main/reset.scss";
 @import "./loginsan/loginsan.scss";
 @import "./mypage/mypage.scss";
 @import "./mypage/reset.scss";
@@ -5,6 +7,7 @@
 @import "../scss/join/join.scss";
 @import "../scss/join/join_succeed.scss";
 @import './Found/found.scss';
+
 div,
 h1,
 span,
@@ -15,7 +18,7 @@ p {
   text-decoration: none;
 }
 
-@import './Found/found.scss';
+
 h1 {
     color: teal;
     background-color: orange;
