@@ -86,7 +86,7 @@ module.exports = (env, argv) => {
             new MiniCssExtractPlugin({ filename: '[name].css' }),
             new HtmlWebpackPlugin({
                 template: `${TEMPLATE_PATH}/home.html`,
-            }),
+            })
             new HtmlWebpackPlugin({  // Also generate a test.html
                 filename: 'mypage/mypage.html',
                 template: `${TEMPLATE_PATH}/mypage/mypage.html`,
