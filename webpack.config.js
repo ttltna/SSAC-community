@@ -85,40 +85,31 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                template: `${TEMPLATE_PATH}/home.html`,
+                template: `${TEMPLATE_PATH}/index.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: '/login/login.html',
-                template: `${TEMPLATE_PATH}/login/login.html`,
+                filename: '/guest/login.html',
+                template: `${TEMPLATE_PATH}/guest/login.html`,
             }),            // new BundleAnalyzerPlugin()
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'loginsan/loginsan.html',
-                template: `${TEMPLATE_PATH}/loginsan/loginsan.html`,
+                filename: 'user/my_page.html',
+                template: `${TEMPLATE_PATH}/user/my_page.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'loginsan/santest.html',
-                template: `${TEMPLATE_PATH}/loginsan/santest.html`,
-                // template: `${TEMPLATE_PATH}/home.html`,
-            }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'mypage/mypage.html',
-                template: `${TEMPLATE_PATH}/mypage/mypage.html`,
-            }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'mypage/changemypage.html',
-                template: `${TEMPLATE_PATH}/mypage/changemypage.html`,
+                filename: 'user/change_password.html',
+                template: `${TEMPLATE_PATH}/user/change_password.html`,
             }),
             new HtmlWebpackPlugin({
-                filename: 'join/join.html',
-                template: `${TEMPLATE_PATH}/join/join.html`,
+                filename: 'guest/join.html',
+                template: `${TEMPLATE_PATH}/guest/join.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'join/join_succeed.html',
-                template: `${TEMPLATE_PATH}/join/join_succeed.html`,
+                filename: 'util/succeed.html',
+                template: `${TEMPLATE_PATH}/util/succeed.html`,
             }),
             new HtmlWebpackPlugin({
-                filename: 'found/found.html',
-                template: `${TEMPLATE_PATH}/found/found.html`,
+                filename: 'guest/find_user.html',
+                template: `${TEMPLATE_PATH}/guest/find_user.html`,
             })
             // new BundleAnalyzerPlugin()
         ],
