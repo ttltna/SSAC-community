@@ -1,2 +1,1 @@
-import "../scss/test.scss";
-console.log("Home")
+import "../scss/index.scss";

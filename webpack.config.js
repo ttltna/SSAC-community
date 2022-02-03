@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
     // devServer
     // devtool: 'eval-cheap-source-map', 
     return {
-        mode: "development",
+        mode: "production",
         devServer: {
             // contentBase:'./dist', // 서버 시작 시 static 파일 경로 지정
             port: 8891,
@@ -84,12 +84,32 @@ module.exports = (env, argv) => {
             new Dotenv(),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
-            new HtmlWebpackPlugin({
-                template: `${TEMPLATE_PATH}/home.html`,
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                template: `${TEMPLATE_PATH}/index.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'login.html',
-                template: `${TEMPLATE_PATH}/login.html`,
+                filename: '/guest/login.html',
+                template: `${TEMPLATE_PATH}/guest/login.html`,
+            }),            // new BundleAnalyzerPlugin()
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'user/my_page.html',
+                template: `${TEMPLATE_PATH}/user/my_page.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'user/change_password.html',
+                template: `${TEMPLATE_PATH}/user/change_password.html`,
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'guest/join.html',
+                template: `${TEMPLATE_PATH}/guest/join.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'util/succeed.html',
+                template: `${TEMPLATE_PATH}/util/succeed.html`,
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'guest/find_user.html',
+                template: `${TEMPLATE_PATH}/guest/find_user.html`,
             })
             // new BundleAnalyzerPlugin()
         ],

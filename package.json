@@ -6,7 +6,8 @@
   "scripts": {
     "development": "webpack --watch --mode=development",
     "production": "webpack --watch --mode=production",
-    "dev": "webpack server --progress"
+    "dev": "webpack server --progress",
+    "staging": "netlify deploy --prod"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "dotenv-webpack": "^7.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "netlify-cli": "^8.15.3",
     "sass": "^1.49.4",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
