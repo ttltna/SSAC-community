@@ -1,0 +1,71 @@
+.joinMemberShip{
+    margin: 0 auto;
+    width: calc(100% - 30%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+hr{
+    width: calc(100% - 30%);
+}
+
+.userInfo{}
+.userInfo form{}
+
+.userInfo form .userId{}
+.userInfo form .userId span{}
+.userInfo form .userId input{}
+.userInfo form .userId button{}
+
+.userInfo form .userPw{}
+.userInfo form .userPw span{}
+.userInfo form .userPw input{}
+
+.userInfo form .userPwCheck{}
+.userInfo form .userPwCheck span{}
+.userInfo form .userPwCheck input{}
+
+.userInfo form .userEmail{}
+.userInfo form .userEmail span{}
+.userInfo form .userEmail input{}
+
+.userInfo form .userName{}
+.userInfo form .userName span{}
+.userInfo form .userName input{}
+
+.userInfo form .userCampus{}
+.userInfo form .userCampus p{
+    display: inline;
+}
+.userInfo form .userCampus select{}
+.userInfo form .userCampus option{}
+
+.buttons{
+    margin: 0 auto;
+    width: calc(100% - 30%);
+    margin-top: 20px;
+}
+.buttons a{}
+.buttons a button{}
+
+
+/* 통합 가능한지 아니면 태그마다 적용할건지 */
+span{
+    font-size: 12px;
+    color: rgb(233, 104, 104);
+}
+
+div{
+    margin-top: 20px;
+}
+
+form{
+    margin: 0 auto;
+    width: calc(100% - 30%);
+}
+
+button{
+    background-color: #d4d3d0;
+    border: none;
+}
