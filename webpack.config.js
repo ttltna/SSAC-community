@@ -84,10 +84,31 @@ module.exports = (env, argv) => {
             new Dotenv(),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: '[name].css' }),
-            new HtmlWebpackPlugin({
+            new HtmlWebpackPlugin({  // Also generate a test.html
                 template: `${TEMPLATE_PATH}/home.html`,
             }),
             new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: '/login/login.html',
+                template: `${TEMPLATE_PATH}/login/login.html`,
+            }),            // new BundleAnalyzerPlugin()
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'loginsan/loginsan.html',
+                template: `${TEMPLATE_PATH}/loginsan/loginsan.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'loginsan/santest.html',
+                template: `${TEMPLATE_PATH}/loginsan/santest.html`,
+                // template: `${TEMPLATE_PATH}/home.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/mypage.html',
+                template: `${TEMPLATE_PATH}/mypage/mypage.html`,
+            }),
+            new HtmlWebpackPlugin({  // Also generate a test.html
+                filename: 'mypage/changemypage.html',
+                template: `${TEMPLATE_PATH}/mypage/changemypage.html`,
+            }),
+            new HtmlWebpackPlugin({
                 filename: 'join/join.html',
                 template: `${TEMPLATE_PATH}/join/join.html`,
             }),
