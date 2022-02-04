@@ -1,6 +1,7 @@
 # 프론트엔드 임시 서버
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e2e737de-b40c-43de-9993-3cda2e4ca824/deploy-status)](https://app.netlify.com/sites/sesac-community/deploys)
+[![Netlify Server](https://api.netlify.com/api/v1/badges/e2e737de-b40c-43de-9993-3cda2e4ca824/deploy-status)](https://app.netlify.com/sites/sesac-community/deploys)
+[Server](https://sesac-community.netlify.app)
 
 ## 프론트엔드 프로젝트 구조
 
@@ -33,3 +34,4 @@
   - util
     - succeed
 - index
+
