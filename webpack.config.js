@@ -13,109 +13,190 @@ const TEMPLATE_PATH = './src/views'
 module.exports = (env, argv) => {
     // devServer
     // devtool: 'eval-cheap-source-map', 
-    return {
-        mode: argv.mode,
-        devServer: {
-            // contentBase:'./dist', // 서버 시작 시 static 파일 경로 지정
-            port: 8891,
-            hot: true
-        },
+    const mode = argv.mode
+    if (mode === 'production') {
+        return {
+            mode: "production",
+            devServer: {
+                // contentBase:'./dist', // 서버 시작 시 static 파일 경로 지정
+                port: 8891,
+                hot: true
+            },
 
-        // webpack config
-        entry: {
-            main: `${JS_PATH}/index.js`,
-            component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`]
-        },
-        output: {
-            filename: '[name].[chunkhash].bundle.js',
-            path: path.resolve(__dirname, 'dist'),
-            publicPath: '/'
-        },
-        resolve: {
-            modules: ['node_modules'],
-            extensions: ['.js', '.json', '.jsx', '.css'],
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.(js|jsx)$/,
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            [
-                                '@babel/preset-env', {
-                                    targets: {
-                                        node: 'current', // 노드일 경우만
-                                        //browsers: ["last 3 versions", "ie >= 11"] // 각 브라우저로도 가능
-                                    },
-                                    modules: false, //<== 이거 에러나는데 왜 아는거지?? 
-                                    // useBuiltIns: 'usage' <== 이거 경고 나옴...
-                                }
+            // webpack config
+            entry: {
+                main: `${JS_PATH}/index.js`,
+                component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`]
+            },
+            output: {
+                filename: '[name].[chunkhash].bundle.js',
+                path: path.resolve(__dirname, 'dist'),
+                publicPath: '/'
+            },
+            resolve: {
+                modules: ['node_modules'],
+                extensions: ['.js', '.json', '.jsx', '.css'],
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.(js|jsx)$/,
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                [
+                                    '@babel/preset-env', {
+                                        targets: {
+                                            node: 'current', // 노드일 경우만
+                                            //browsers: ["last 3 versions", "ie >= 11"] // 각 브라우저로도 가능
+                                        },
+                                        modules: false, //<== 이거 에러나는데 왜 아는거지?? 
+                                        // useBuiltIns: 'usage' <== 이거 경고 나옴...
+                                    }
+                                ],
+                                // '@babel/preset-react', // 리액트를 사용한다면
+                                // '@babel/preset-typescript' // 타입스크립트를 사용한다면
                             ],
-                            // '@babel/preset-react', // 리액트를 사용한다면
-                            // '@babel/preset-typescript' // 타입스크립트를 사용한다면
-                        ],
-                        plugins: ['@babel/plugin-syntax-dynamic-import', "@babel/plugin-transform-runtime"]
-                    },
-                    include: [path.resolve(__dirname, JS_PATH)],
-                    exclude: ['/node_modules'],
-                },
-                {
-                    test: /\.scss$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: true,
-                            }
+                            plugins: ['@babel/plugin-syntax-dynamic-import', "@babel/plugin-transform-runtime"]
                         },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: true,
-                            }
-                        }],
-                    exclude: ['/node_modules'],
-                }
-            ]
-        },
-        plugins: [
-            new Dotenv(),
-            new CleanWebpackPlugin(),
-            new MiniCssExtractPlugin({ filename: '[name].css' }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                template: `${TEMPLATE_PATH}/index.html`,
-            }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: '/guest/login.html',
-                template: `${TEMPLATE_PATH}/guest/login.html`,
-            }),            // new BundleAnalyzerPlugin()
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'user/my_page.html',
-                template: `${TEMPLATE_PATH}/user/my_page.html`,
-            }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'user/change_password.html',
-                template: `${TEMPLATE_PATH}/user/change_password.html`,
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'guest/join.html',
-                template: `${TEMPLATE_PATH}/guest/join.html`,
-            }),
-            new HtmlWebpackPlugin({  // Also generate a test.html
-                filename: 'util/succeed.html',
-                template: `${TEMPLATE_PATH}/util/succeed.html`,
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'guest/find_user.html',
-                template: `${TEMPLATE_PATH}/guest/find_user.html`,
-            })
-            // new BundleAnalyzerPlugin()
-        ],
-        optimization: {
-            runtimeChunk: 'single' // chunk 변경시 매번 새로고침하기 불편해서 적용
+                        include: [path.resolve(__dirname, JS_PATH)],
+                        exclude: ['/node_modules'],
+                    },
+                    {
+                        test: /\.scss$/,
+                        use: [
+                            MiniCssExtractPlugin.loader,
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    sourceMap: true,
+                                }
+                            },
+                            {
+                                loader: 'sass-loader',
+                                options: {
+                                    sourceMap: true,
+                                }
+                            }],
+                        exclude: ['/node_modules'],
+                    }
+                ]
+            },
+            plugins: [
+                new Dotenv(),
+                new CleanWebpackPlugin(),
+                new MiniCssExtractPlugin({ filename: '[name].css' }),
+                // new BundleAnalyzerPlugin()
+            ],
+            optimization: {
+                runtimeChunk: 'single'
+            }
+        }
+
+    } else {
+        return {
+            mode: "development",
+            devServer: {
+                // contentBase:'./dist', // 서버 시작 시 static 파일 경로 지정
+                port: 8891,
+                hot: true
+            },
+
+            // webpack config
+            entry: {
+                main: `${JS_PATH}/index.js`,
+                component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`]
+            },
+            output: {
+                filename: '[name].[chunkhash].bundle.js',
+                path: path.resolve(__dirname, 'dist'),
+                publicPath: '/'
+            },
+            resolve: {
+                modules: ['node_modules'],
+                extensions: ['.js', '.json', '.jsx', '.css'],
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.(js|jsx)$/,
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                [
+                                    '@babel/preset-env', {
+                                        targets: {
+                                            node: 'current', // 노드일 경우만
+                                            //browsers: ["last 3 versions", "ie >= 11"] // 각 브라우저로도 가능
+                                        },
+                                        modules: false, //<== 이거 에러나는데 왜 아는거지?? 
+                                        // useBuiltIns: 'usage' <== 이거 경고 나옴...
+                                    }
+                                ],
+                                // '@babel/preset-react', // 리액트를 사용한다면
+                                // '@babel/preset-typescript' // 타입스크립트를 사용한다면
+                            ],
+                            plugins: ['@babel/plugin-syntax-dynamic-import', "@babel/plugin-transform-runtime"]
+                        },
+                        include: [path.resolve(__dirname, JS_PATH)],
+                        exclude: ['/node_modules'],
+                    },
+                    {
+                        test: /\.scss$/,
+                        use: [
+                            MiniCssExtractPlugin.loader,
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    sourceMap: true,
+                                }
+                            },
+                            {
+                                loader: 'sass-loader',
+                                options: {
+                                    sourceMap: true,
+                                }
+                            }],
+                        exclude: ['/node_modules'],
+                    }
+                ]
+            },
+            plugins: [
+                new Dotenv(),
+                new CleanWebpackPlugin(),
+                new MiniCssExtractPlugin({ filename: '[name].css' }),
+                new HtmlWebpackPlugin({  // Also generate a test.html
+                    template: `${TEMPLATE_PATH}/index.html`,
+                }),
+                new HtmlWebpackPlugin({  // Also generate a test.html
+                    filename: 'guest/login.html',
+                    template: `${TEMPLATE_PATH}/guest/login.html`,
+                }),            // new BundleAnalyzerPlugin()
+                new HtmlWebpackPlugin({  // Also generate a test.html
+                    filename: 'user/my_page.html',
+                    template: `${TEMPLATE_PATH}/user/my_page.html`,
+                }),
+                new HtmlWebpackPlugin({  // Also generate a test.html
+                    filename: 'user/change_password.html',
+                    template: `${TEMPLATE_PATH}/user/change_password.html`,
+                }),
+                new HtmlWebpackPlugin({
+                    filename: 'guest/join.html',
+                    template: `${TEMPLATE_PATH}/guest/join.html`,
+                }),
+                new HtmlWebpackPlugin({  // Also generate a test.html
+                    filename: 'util/succeed.html',
+                    template: `${TEMPLATE_PATH}/util/succeed.html`,
+                }),
+                new HtmlWebpackPlugin({
+                    filename: 'guest/find_user.html',
+                    template: `${TEMPLATE_PATH}/guest/find_user.html`,
+                })
+                // new BundleAnalyzerPlugin()
+            ],
+            optimization: {
+                runtimeChunk: 'single' // chunk 변경시 매번 새로고침하기 불편해서 적용
+            }
         }
     }
-
 }
