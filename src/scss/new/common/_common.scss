@@ -1,28 +1,76 @@
-// 버튼, 아이콘, 햄버거 버튼 클릭시 나오는 목차, input태그(border-radius), 기본 레이아웃(양쪽 마진)
-.basic_btn{ //기본 버튼
-    border: none;
-    border-radius: 50px;
+@charset "utf-8";
+
+// skip 
+.skip,
+legend {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* text-indent:-9999px */
+  position: absolute;
+  left: -999px;
+  line-height: 0;
+  display: inline-block;
 }
 
-.ham_btn{ //햄버거 버튼
-
+#skipMenu {
+  position: relative;
+  width: 100%;
+  z-index: 999;
 }
 
-.title_icon{ //타이틀로 돌아가는 아이콘
-//이미지
+#skipMenu a {
+  position: absolute;
+  top: -100px;
 }
 
-.undo_icon{ //뒤로 돌아가는 아이콘
-//이미지
+#skipMenu a:hover,
+#skipMenu a:active,
+#skipMenu a:focus {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
 }
+//skip end
 
-.basic_input{ //모든 input의 틀
-    border: none;
-    border-radius: 50px;
-    height: 40px;
-    padding: 5px 5px;
+// common.css
+.wrap {
+  width: 100%;
 }
 
 .inner{ //layout_margin(left,right)
     width: calc(100% - 434px);
+    margin: 0 auto;
 }
+
+.btn {
+  background-color: #cacaca;
+  color: #000;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.input_radius {
+  border-radius: 50px;
+  border: none;
+}
+
+.select_radius {
+  border: 50px;
+  border: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 100%;
+}
+// common.css end
