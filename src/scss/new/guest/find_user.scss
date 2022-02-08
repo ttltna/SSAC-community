@@ -1,0 +1,72 @@
+.inner .find-id,
+.inner .find-pw{}
+.find_user__h2{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 110px;
+}
+.find-id{
+  margin-top: 37px;
+}
+.find_user_find-id__label{
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 19px;
+  margin-left: 39px;
+}
+.find_user_find-id__id-email-btn{
+  width: 88px;
+  height: 50px;
+  background-color: #709991;
+  color: #fff;
+  cursor: pointer;
+}
+
+.find_user_find-id__id-email-input,
+.find_user_find-pw__pw-email-input,
+.find_user_find-pw__pw-code-input,
+.find_user_find-pw__pw-reset-input{
+  background-color: #eee;
+  width: 413px;
+  height: 30px;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.find_user__h2__find_pw{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 115px;
+  margin-bottom: 30px;
+}
+.find_user_find-pw__pw-email-btn{
+  width: 88px;
+  height: 50px;
+  font-size: 12px;
+  background-color: #709991;
+  color: #fff;
+  cursor: pointer;
+}
+.find_user_find-pw__pw-code-btn,
+.find_user_find-pw__pw-reset-btn{
+  width: 88px;
+  height: 50px;
+  cursor: pointer;
+}
+.find_user_find-pw__box{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.find_user_find-pw__label{
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 39px;
+}
+.find_user_find-pw__label-code{
+  margin-left: 14px;
+}
+.find_user_find-pw__label-pw-reset{
+  margin-left: -41px;
+}
