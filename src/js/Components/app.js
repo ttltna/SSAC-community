@@ -1,1 +1,2 @@
-console.log('app component')
+import '../new/guest/find_user'
+// console.log('app component')
