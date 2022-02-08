@@ -176,10 +176,6 @@ module.exports = (env, argv) => {
                     filename: 'user/my_page.html',
                     template: `${TEMPLATE_PATH}/user/my_page.html`,
                 }),
-                new HtmlWebpackPlugin({  // Also generate a test.html
-                    filename: 'user/change_password.html',
-                    template: `${TEMPLATE_PATH}/user/change_password.html`,
-                }),
                 new HtmlWebpackPlugin({
                     filename: 'guest/join.html',
                     template: `${TEMPLATE_PATH}/guest/join.html`,
