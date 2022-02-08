@@ -1,0 +1,124 @@
+//margin을 더 주기위한 
+.join_add_margin{
+    width: calc(100% - 390px);
+    margin: 0 auto;
+    padding-top: 210px;
+}
+
+// background img replace color
+.join_wrap{
+    background-color: #2E4C46;
+    height: 100vh;
+}
+
+//SeSAC title font-size & color & margin
+.join_title{
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+//all form in div tag margin
+.join_user-info div{
+    margin-bottom: 10px;
+    
+}
+
+// 비밀번호 확인 이미지 넣기전 임시 check 버튼
+.join_user-temp-check{
+    width:30px;
+    height:30px;
+}
+
+// 핸드폰번호 제외 input tag size & border
+.join_user-info__input-user-name,
+.join_user-info__input-user-email,
+.join_user-info__input-user-password,
+.join_user-info__input-check-password{
+    width: 394px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #9E9E9E;
+}
+// 핸드폰번호 input tah size & border
+.join_user-info__input-user-phone-number{
+    width: 286px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #9E9E9E;
+}
+
+// 본인 인증하기 버튼
+.join_user-info__btn-phone-send-proof{
+    width: 89px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #AEAEAE;
+    color: #FFF;
+    font-size: 12px;
+}
+
+// input태그 바텀에 마진 줘서 p태그들 아래로 밀기
+.join_user-info__input-user-name,
+.join_user-info__input-user-phone-number,
+.join_user-info__input-user-password,
+.join_user-info__status,
+.join_user-info__input-check-password{
+    margin-bottom: 10px;
+}
+
+// p태그 바텀에 마진 줘서 input태그들 아래로 밀기
+.join_user-info__proof-status,
+.join_user-info__id-status,
+.join_user-info__pw-status,
+.join_user-info__pw-check-fail{
+    padding-left: 40px;
+    color: #B5B5B5;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.join_user-info__proof-status::before,
+.join_user-info__id-status::before,
+.join_user-info__pw-status::before,
+.join_user-info__pw-check-fail::before{
+    content: "*";
+    margin-right: 5px;
+}
+
+// select 박스
+.select_Campus,
+.select_process{
+    width: 414px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #9E9E9E;
+}
+
+// 가입하기 버튼 가운데 정렬
+.join_buttons{
+    position: relative;
+    left: 117px;
+}
+
+// 가입하기 버튼
+.join_buttons__submit{
+    width: 196px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

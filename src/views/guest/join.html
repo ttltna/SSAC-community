@@ -7,61 +7,62 @@
     <title>scss || join</title>
 </head>
 <body>
-    <div class="join_wrap">
+    <div class="join_wrap wrap">
         <div class="join_inner inner">
-            <div class="join_membership">
-                <h1>SSAC</h1>
-                <form class="join_user-info">
-                    <div class="join_user-id"> <!-- 유저 아이디 입력 input & 중복확인 btn -->
-                        <input type="text" class="join_user-info__input-user-name input_radius" required placeholder="닉네임을 입력하세요!">
-                        <button class="join_user-info__btn-user-name-check btn">중복확인</button>
+            <div class="join_add_margin">
+                <div class="join_membership">
+                    <h1 class="join_title">SeSAC</h1>
+                    <form class="join_user-info">
+                        <div class="join_user-id"> <!-- 유저 아이디 입력 input & 중복확인 btn -->
+                            <input type="text" class="join_user-info__input-user-name input_radius" required placeholder="닉네임을 입력하세요!">
+                            <p class="join_user-info__id-status">8 ~ 16자 이내의 한글,영문,숫자를 사용해 주세요.</p>
+                            <!-- 한글자 적을때마다 키보드 이벤트로 data-base에서 id값 불러와 비교 후 있으면 중복 없으면 사용가능 출력하기 -->
+                        </div>
+                        <div class="join_user-email"> <!-- 유저 이메일 입력 input & 인증 보내기 btn -->
+                            <input type="text" class="join_user-info__input-user-email input_radius" required placeholder="이메일">
+                        </div>
+    
+                        <div class="join_user-password"> <!-- 유저 비밀번호 입력 input & 비밀번호가 condition 조건에 안맞으면 출력해줄 span -->
+                            <input type="password" class="join_user-info__input-user-password input_radius" required placeholder="비밀번호" minlength="8" maxlength="16">
+                            <p class="join_user-info__pw-status">8 ~ 16자 이내의 영문,숫자를 사용해 주세요.</p>
+                        </div>
+    
+                        <div class="join_user-password-match"> <!-- 유저 비밀번호를 생각한대로 잘 입력하였는지 확인하기위한 비밀번호 확인 input & 입력받은값과 다르면 출력해줄 span -->
+                            <input type="text" class="join_user-info__input-check-password input_radius" required placeholder="비밀번호 확인" minlength="8" maxlength="16">
+                            <button class="join_user-temp-check">임시</button><!-- img넣어서 비밀번호 일치시 체크, 불일치시 X자 표시할 이미지 넣을곳-->
+                        </div>
+    
+                        <div class="join_user-phone-number"> <!-- 유저 핸드폰번호 입력 input & 인증번호 보낼 btn -->
+                            <input type="text" class="join_user-info__input-user-phone-number input_radius" required maxlength="13" placeholder="연락처">
+                            <button class="join_user-info__btn-phone-send-proof btn">본인 인증하기</button>
+                            <p class="join_user-info__proof-status">본인 인증을 완료해 주세요.</p>
+                            <!-- 본인 인증 완료시 join_user-info__proof-status hidden으로 클래스명 추가해주기 -->
+                        </div>
+    
+                        <div class="join_campus"> <!-- 캠퍼스 선택을 위한 select-->
+                            <!-- 셀렉트버튼 제작 -->
+                            <select name="select_campus" id="selectCampus" class="select_Campus select_radius">
+                                <option value="where">어떤 캠퍼스에 다니고 있나요?</option>
+                                <option value="waiting">수강대기</option>
+                                <option value="yeongdeungpo">SeSac영등포</option>
+                                <option value="geumcheon">SeSac금천</option>
+                            </select>
+                        </div>
+    
+                        <div class="join_class"> <!-- 듣고있는 강의 선택을 위한 select -->
+                            <select name="select_process" id="selectProcess" class="select_process select_radius">
+                                <option value="what">어떤 수업을 듣고 있나요?</option>
+                                <option value="waiting">수강대기</option>
+                                <option value="pwa">PWA 프론트엔드 & 웹퍼블리셔 과정</option>
+                                <option value="kotlin">코틀린 안드로이드 앱 과정</option>
+                                <option value="bigdata">빅데이터 전문가 양성 과정</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div class="join_buttons"> <!-- 뒤로가기와 회원가입 제출을 위한 btn -->
+                        <!-- <a href="./login.html"><button class="join_buttons__undo btn">뒤로가기</button></a> -->
+                        <a href="../util/succeed.html"><button class="join_buttons__submit btn">가입하기</button></a>
                     </div>
-                    <div class="join_user-email"> <!-- 유저 이메일 입력 input & 인증 보내기 btn -->
-                        <input type="text" class="join_user-info__input-user-email input_radius" required placeholder="이메일">
-                        <button class="join_user-info__btn-email-send-proof btn">이메일 인증</button>
-                    </div>
-                    <!-- 이메일로 인증번호 받은걸 적을 input이 필요한지?? 필요하면 그때 제작 -->
-
-                    <div class="join_user-password"> <!-- 유저 비밀번호 입력 input & 비밀번호가 condition 조건에 안맞으면 출력해줄 span -->
-                        <input type="password" class="join_user-info__input-user-password input_radius" required placeholder="비밀번호">
-                        <span class="join_user-info__passwosrd-condition-check"></span>
-                    </div>
-                    <div class="join_user-password-match"> <!-- 유저 비밀번호를 생각한대로 잘 입력하였는지 확인하기위한 비밀번호 확인 input & 입력받은값과 다르면 출력해줄 span -->
-                        <input type="password" class="join_user-info__input-check-password input_radius" required placeholder="비밀번호 확인">
-                        <span class="join_user-info__password-match-check"></span>
-                    </div>
-
-                    <!-- 개인프로필 사진은 마이페이지 수정에서 해야하는거같아서 일단 제작안함 필요하면 그때 제작 -->
-
-                    <div class="join_user-phone-number"> <!-- 유저 핸드폰번호 입력 input & 인증번호 보낼 btn -->
-                        <input type="text" class="join_user-info__input-user-phone-number input_radius" required maxlength="13" placeholder="핸드폰 번호를 입력해주세요.">
-                        <button class="join_user-info__btn-phone-send-proof btn">핸드폰 인증</button>
-                    </div>
-                    <div class="join_check-phone-number-proof"> <!-- 핸드폰 번호 인증 input & 인증하기 위한 btn --> <!-- 핸드폰 인증버튼 누르기 전까진 hidden으로 숨김 -->
-                        <input type="text" class="join_user-info__input-phone-proof input_radius" required placeholder="인증 번호를 입력해주세요.">
-                        <button class="join_user-info__btn-check-phone-proof btn">인증하기</button>
-                    </div>
-                    <div class="join_campus"> <!-- 캠퍼스 선택을 위한 select-->
-                        <!-- 셀렉트버튼 제작 -->
-                        <select name="select_campus" id="selectCampus" class="select_radius">
-                            <option value="waiting">수강대기</option>
-                            <option value="yeongdeungpo">SeSac영등포</option>
-                            <option value="geumcheon">SeSac금천</option>
-                        </select>
-                    </div>
-
-                    <div class="join_class"> <!-- 듣고있는 강의 선택을 위한 select -->
-                        <select name="select_class" id="selectClass" class="select_radius">
-                            <option value="waiting">수강대기</option>
-                            <option value="pwa">PWA 프론트엔드 & 웹퍼블리셔 과정</option>
-                            <option value="kotlin">코틀린 안드로이드 앱 과정</option>
-                            <option value="bigdata">빅데이터 전문가 양성 과정</option>
-                        </select>
-                    </div>
-                </form>
-                <div class="join_buttons"> <!-- 뒤로가기와 회원가입 제출을 위한 btn -->
-                    <a href="./login.html"><button class="join_buttons__undo btn">뒤로가기</button></a>
-                    <a href="../util/succeed.html"><button class="join_buttons__submit btn">제출</button></a>
                 </div>
             </div>
         </div>
