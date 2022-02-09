@@ -1,0 +1,139 @@
+.my_page_add_margin{
+    margin-left: 178px;
+    padding-top: 310px;
+    display: flex;
+}
+
+.my_page_user-pic .my_page_user-pic__title{
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'roboto';
+    display: flex;
+    width: 135px;
+    height: 38px;
+}
+
+.my_page_user-pic .my_page_user-pic__picture{
+    display: inline-block;
+    width: 127px;
+    height: 127px;
+    background-color: #D4D4D4;
+    border-radius: 100%;
+    margin-top: 99px;
+    position: relative;
+}
+
+
+.my_page_user-info{
+    margin-left: 134px;
+}
+
+.my_page_user-info__name {
+    width: 325px;
+    height: 50px;
+    position: relative;
+    box-shadow: 1px;
+    background-color: #CADDD9;
+    border-radius: 50px;
+    display: flex;
+}
+
+.my_page_user-info__name label{
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 19px;
+}
+.my_page_user-info__current-name{
+    margin-left: 19px;
+    background: transparent;
+    border: 0 none;
+    
+}
+
+.my_page_user-info__campus {
+    width: 325px;
+    height: 50px;
+    position: relative;
+    box-shadow: 1px;
+    background-color: #EEEEEE;
+    border-radius: 50px;
+    margin-top: 24px;
+    display: flex;
+}
+
+.my_page_user-info__campus label{
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 19px;
+    
+}
+.my_page_change_campus{
+    margin-left: 19px;
+    background: transparent;
+    border: 0 none;
+}
+
+.my_page_user-info__class {
+    width: 325px;
+    height: 50px;
+    position: relative;
+    box-shadow: 1px;
+    background-color: #EEEEEE;
+    border-radius: 50px;
+    margin-top: 24px;
+    display: flex;
+    color: #000;
+}
+
+.my_page_user-info__class label{
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 19px;
+}
+
+.my_page_change_process{
+    margin-left: 19px;
+    background: transparent;
+    border: 0 none;
+
+}
+.my_page_user-info__history{
+    margin-top: 90px;
+    display: flex;
+    height: 23px;
+}
+
+.my_page_user-info__history button {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.my_page_user-info__change-pw{
+    margin-top: 58px;
+    display: flex;
+    height: 23px;
+}
+
+.my_page_user-info__change-pw button{
+    font-size: 16px;
+    height: 23px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.my_page_user-info__withdrawl{
+    margin-top: 50px;
+}
+
+.my_page_add_margin button{
+    background: transparent;
+    border: 0 none;
+}

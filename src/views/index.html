@@ -5,15 +5,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>SSAC || Main</title>
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
-
 <body>
 	<div class="wrap">
 		<input type="checkbox" id="sidebar">
-		<!-- 헤더 네비게이션 -->
+		<!-- 헤더 네비게이션 start-->
 		<header>
 			<div class="header_btn">
 				<a href="./index.html" class="home_btn">
@@ -27,7 +26,7 @@
 				</label>
 			</div>
 		</header>
-		<!-- 사이드바 메뉴 -->
+		<!-- 사이드바 메뉴 start-->
 		<div class="sidebar_content">
 			<ul class="sidebar_wrap">
 				<li>
@@ -52,49 +51,39 @@
 				</li>
 			</ul>
 		</div>
-		<label for="sidebar"></label>
-	</div>
-	<!-- //사이드바 메뉴 -->
-	<!-- 메뉴 눌렀을때 배경부분 영역 -->
+		<!-- <label for="sidebar"></label> -->
+	<!-- 사이드바 메뉴 end-->
+	
+	<!-- 메뉴 눌렀을때 배경부분 어두운 색으로 바뀌는 영역 -->
 	<div class="background"></div>
-	<!-- // 메뉴 눌렀을때 배경부분 영역 -->
-	<!-- constents 영역 -->
+	<!--  메뉴 눌렀을때 배경부분 영역 -->
+
+	<!-- inner start -->
 	<div class="inner">
+
 		<!-- 본문내용 작성하기 -->
-		<h2>constents</h2>
-		<section class="section01">
-			<a href="">
-				<div class="board">
+		<h2 class="main_header-title">Contents</h2>
+		<section class="main_section">
+			<a href="" class="main_link main_board">
+				<img src="" alt="">
+				<h3 class="main_title">
 					자유게시판
-				</div>
+				</h3>
 			</a>
-			<a href="">
-				<div class="asd">
+			<a href="" class="main_link main_project">
+				<img src="" alt="">
+				<h3 class="main_title">
 					프로젝트 모집
-				</div>
+				</h3>
 			</a>
-			<a href="">
-				<div class="wert">
+			<a href="" class="main_link main_evaluation">
+				<img src="" alt="">
+				<h3 class="main_title">
 					강의평가
-				</div>
+				</h3>
 			</a>
 		</section>
 	</div>
 	<!-- //constents 영역 -->
-	</div>
-	<!-- <script>
-		const closeBtn = document.querySelector('.close_label');
-		const openBtn = document.querySelector('.open_label');
-		const sidebarMenu = document.querySelector('.sidebar_content')
-
-		closeBtn.addEventListener('click', () => {
-			sidebarMenu.style.right = -309 + 'px'
-		})
-
-		openBtn.addEventListener('click', () => {
-			sidebarMenu.style.right = 0 + 'px'
-		})
-	</script> -->
 </body>
-
 </html>

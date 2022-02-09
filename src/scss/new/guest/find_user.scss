@@ -1,5 +1,3 @@
-.inner .find-id,
-.inner .find-pw{}
 .find_user__h2{
   font-size: 24px;
   font-weight: bold;
@@ -8,13 +6,17 @@
 .find-id{
   margin-top: 37px;
 }
+.find_user_inner{
+  width: 90%;
+  margin: 0 auto;
+}
 .find_user_find-id__label{
   font-size: 18px;
   font-weight: bold;
   margin-right: 19px;
-  margin-left: 39px;
+  margin-left: 12px;
 }
-.find_user_find-id__id-email-btn{
+.find_user_find-id__id-phone-btn{
   width: 88px;
   height: 50px;
   background-color: #709991;
@@ -22,8 +24,8 @@
   cursor: pointer;
 }
 
-.find_user_find-id__id-email-input,
-.find_user_find-pw__pw-email-input,
+.find_user_find-id__id-phone-input,
+.find_user_find-pw__pw-phone-input,
 .find_user_find-pw__pw-code-input,
 .find_user_find-pw__pw-reset-input{
   background-color: #eee;
@@ -31,6 +33,7 @@
   height: 30px;
   padding: 10px;
   margin-right: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .find_user__h2__find_pw{
@@ -39,7 +42,7 @@
   margin-top: 115px;
   margin-bottom: 30px;
 }
-.find_user_find-pw__pw-email-btn{
+.find_user_find-pw__pw-phone-btn{
   width: 88px;
   height: 50px;
   font-size: 12px;
@@ -62,11 +65,11 @@
   margin-right: 20px;
   font-weight: bold;
   font-size: 18px;
-  margin-left: 39px;
+  margin-left: 23px;
 }
-.find_user_find-pw__label-code{
-  margin-left: 14px;
+.find_user_find-pw__box-code{
+  margin-left: 0px;
 }
-.find_user_find-pw__label-pw-reset{
-  margin-left: -41px;
+.find_user_find-pw__box-reset{
+  margin-left: -58px;
 }
