@@ -14,18 +14,19 @@
 
                     <div class="my_page_user-pic">
                         <h1 class="my_page_user-pic__title">My Page</h1>
-                        <img class="my_page_user-pic__picture" src="" alt="">
+                        <a class="my_page_user-pic__picture" href=""></i>
+                        </a>
                     </div>
 
-                    <form action="my_page_user-info">
+                    <form action="" class="my_page_user-info">
                         
                         <div class="my_page_user-info__name">
-                            <p class="my_page_user-info__name-title">이름</p>
-                            <input type="text"  class="my_page_user-info__current-name" placeholder="덤블도어">
+                            <label for="labelname" class="my_page_user-info__name-title">이름</label>
+                            <input id="labelname" type="text"  class="my_page_user-info__current-name" placeholder="덤블도어">
                         </div>
 
                         <div class="my_page_user-info__campus">
-                            <p class="my_page_user-info__campus-title">캠퍼스</p>
+                            <label for="changeCampus" class="my_page_user-info__campus-title">캠퍼스</label>
                             <select name="change_campus" id="changeCampus" class="my_page_change_campus">
                                 <option value="current_campus">회원가입시 지정값</option>
                                 <option value="yeongdeungpo">SeSac영등포</option>
@@ -35,7 +36,7 @@
                         </div>
 
                         <div class="my_page_user-info__class">
-                            <p class="my_page_user-info__class-title">분반</p>
+                            <label for="changeProcess" class="my_page_user-info__class-title">분반</label>
                             <select name="change_process" id="changeProcess" class="my_page_change_process">
                                 <option value="current_process">회원가입시 지정값</option>
                                 <option value="waiting">수강대기</option>
@@ -46,13 +47,12 @@
                         </div>
 
                         <div class="my_page_user-info__history">
-                            <span class=""></span>
+                            <span class="list_circle"></span>
                             <button>내가 작성한 글</button>
                         </div>
 
                         <div class="my_page_user-info__change-pw">
-                            <span class=""></span>
-
+                            <span class="list_circle"></span>
                             <button>비밀번호 변경</button>
                         </div>
 
