@@ -8,32 +8,63 @@
   </head>
 
   <body>
-      <div class="wrap">
-          <div class="inner">
-              <div class="my_page_user-pic">
-                  <h1 class="my_page_user-pic__title">My Page</h1>
-                  <a href="" class="my_page_user-pic__picture">picture</a>
-              </div>
-              <div class="my_page_user-info">
-                  <div class="my_page_user-info__common">
-                      <p class="my_page_user-info__common-name">이름</p>
-                      <p class="my_page_user-info__common-campus">캠퍼스</p>
-                      <p class="my_page_user-info__common-class">분반</p>
-                  </div>
-                  <div class="my_page_user-info__personal">
-                      <a href="" class="my_page_user-info__personal-name">덤블도어</a>
-                      <a href="" class="my_page_user-info__personal-campus">금천캠퍼스</a>
-                      <a href="" class="my_page_user-info__personal-class">프론트앤드 PWA 과정</a>
-                  </div>
-              </div>
-              <div class="my_page_user-check">
-                  <span class="basic_btn"></span>
-                  <a href="" class="my_page_user-check__history"></a>
-                  <span class="basic_btn"></span>
-                  <a href="" class="my_page_user-check__change-pw"></a>
-                  <a href="" class="my_page_user-check__withdrawl"></a>
-              </div>
-          </div>
-      </div>
+        <div class="wrap">
+            <div class="inner">
+                <div class="my_page_add_margin">
+
+                    <div class="my_page_user-pic">
+                        <h1 class="my_page_user-pic__title">My Page</h1>
+                        <img class="my_page_user-pic__picture" src="" alt="">
+                    </div>
+
+                    <form action="my_page_user-info">
+                        
+                        <div class="my_page_user-info__name">
+                            <p class="my_page_user-info__name-title">이름</p>
+                            <input type="text"  class="my_page_user-info__current-name" placeholder="덤블도어">
+                        </div>
+
+                        <div class="my_page_user-info__campus">
+                            <p class="my_page_user-info__campus-title">캠퍼스</p>
+                            <select name="change_campus" id="changeCampus" class="my_page_change_campus">
+                                <option value="current_campus">회원가입시 지정값</option>
+                                <option value="yeongdeungpo">SeSac영등포</option>
+                                <option value="geumcheon">SeSac금천</option>
+                                <option value="waiting">수강대기</option>
+                            </select>
+                        </div>
+
+                        <div class="my_page_user-info__class">
+                            <p class="my_page_user-info__class-title">분반</p>
+                            <select name="change_process" id="changeProcess" class="my_page_change_process">
+                                <option value="current_process">회원가입시 지정값</option>
+                                <option value="waiting">수강대기</option>
+                                <option value="pwa">PWA 제작 웹프론트엔드 개발</option>
+                                <option value="kotlin">코틀린 기반 안드로이드</option>
+                                <option value="bigdata">클라우드 기반 MSA 스페셜리스트</option>
+                            </select>
+                        </div>
+
+                        <div class="my_page_user-info__history">
+                            <span class=""></span>
+                            <button>내가 작성한 글</button>
+                        </div>
+
+                        <div class="my_page_user-info__change-pw">
+                            <span class=""></span>
+
+                            <button>비밀번호 변경</button>
+                        </div>
+
+                        <div class="my_page_user-info__withdrawl">
+                            <button>회원탈퇴</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
   </body>
 </html>
+
+
