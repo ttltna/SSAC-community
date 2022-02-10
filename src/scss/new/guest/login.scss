@@ -43,3 +43,33 @@
 .login__pw{
   margin-top: 10px;
 }
+
+.login__id_wrap,
+.login__pw_wrap{
+  position: relative;
+  height: 100%;
+}
+.login__id_wrap label{
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  transition: all .3s ease;
+}
+.login__id_wrap input:focus + label,
+.login__id_wrap input:valid + label{
+  left: -30px;
+}
+.login__pw_wrap label{
+  position: absolute;
+  left: 15px;
+  top: 60%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  transition: all .3s ease;
+}
+.login__pw_wrap input:focus + label,
+.login__pw_wrap input:valid + label{
+  left: -30px;
+}
