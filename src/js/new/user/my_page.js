@@ -1,1 +1,1 @@
-console.log('my_page_test');
+console.log('hello')
