@@ -1,3 +1,8 @@
+window.onload = function(){
+    joinform.addEventListener("submit", handleSubmit);
+    joinNickInput.addEventListener("keyup",handleNickNameKeyUp);
+}
+
 const joinform = document.querySelector(".join_user-info");
 const joinNickInput = document.querySelector(".join_user-info__input-user-name");
 const nickCheck = document.querySelector(".join_user-info__id-status");
@@ -54,21 +59,13 @@ function handleNickNameKeyUp(){
     }
 }
 
-joinNickInput.addEventListener("keyup",handleNickNameKeyUp);
-/* 아이디 중복검사를 위해 해야 할 일
-목표 : 닉네임을 joinNickInput에 한글자 씩 적을때마다 이벤트리스너로 값불러와서 비교후 중복인지 아닌지 확인하기
-1. 닉네임을 받기
-2. api로 데이타 받아오기
-3. 값 비교하기
-4. submit은 막고
-5. keybord event만들기
-6. 정규표현식까지 공부해서 적용하기 */
+// joinNickInput.addEventListener("keyup",handleNickNameKeyUp);
 
 function handleSubmit(e){
     e.preventDefault();
 }
 
-joinform.addEventListener("submit", handleSubmit);
+// joinform.addEventListener("submit", handleSubmit);
 
 
 // 연락처를 위한 정규 표현식
