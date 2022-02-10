@@ -1,4 +1,4 @@
-// console.log('Hello! find_user')
+// helper함수
 const _get = (target) => {
   return document.querySelector(target)
 }
