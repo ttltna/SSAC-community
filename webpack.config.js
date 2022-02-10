@@ -26,7 +26,11 @@ module.exports = (env, argv) => {
             // webpack config
             entry: {
                 main: `${JS_PATH}/index.js`,
-                component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`]
+                component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`,`${JS_PATH}/new/common/_common.js`
+                ,`${JS_PATH}/new/common/_header.js`,`${JS_PATH}/new/common/_reset.js`,`${JS_PATH}/new/guest/find_user.js`
+                ,`${JS_PATH}/new/guest/join.js`,`${JS_PATH}/new/guest/login.js`,`${JS_PATH}/new/user/my_page.js`
+                ,`${JS_PATH}/new/util/main.js`,`${JS_PATH}/new/util/succeed.js`
+                ,`${JS_PATH}/new/board/evaluation.js`,`${JS_PATH}/new/board/general_forum.js`,`${JS_PATH}/new/board/recruit_project.js`]
             },
             output: {
                 filename: '[name].[chunkhash].bundle.js',
@@ -187,6 +191,18 @@ module.exports = (env, argv) => {
                 new HtmlWebpackPlugin({
                     filename: 'guest/find_user.html',
                     template: `${TEMPLATE_PATH}/guest/find_user.html`,
+                }),
+                new HtmlWebpackPlugin({
+                    filename: 'board/evaluation.html',
+                    template: `${TEMPLATE_PATH}/board/evaluation.html`,
+                }),
+                new HtmlWebpackPlugin({
+                    filename: 'board/general_forum.html',
+                    template: `${TEMPLATE_PATH}/board/general_forum.html`,
+                }),
+                new HtmlWebpackPlugin({
+                    filename: 'board/recruit_project.html',
+                    template: `${TEMPLATE_PATH}/board/recruit_project.html`,
                 })
                 // new BundleAnalyzerPlugin()
             ],
