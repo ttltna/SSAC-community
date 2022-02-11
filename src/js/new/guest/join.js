@@ -66,6 +66,7 @@ function expTest(exp,str2){ //정규 표현식 test 함수
     return exp.test(str2);
 }
 
+
 function checkRegExp(str1){
     const SpcialChar = /[A-Z|a-z|0-9|ㄱ-ㅎ|ㅏ-ㅣ-가-힣]/g;
     console.log(`spcialChar = ${expTest(SpcialChar,str1)}`);
@@ -75,6 +76,7 @@ function checkRegExp(str1){
     //     joinNickInput.value = "";
     // }
 }
+
 
 function handleNickNameKeyUp(){
     /*  닉네임 part를 구현하기 위해서 필요한 것!!
