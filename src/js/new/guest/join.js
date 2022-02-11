@@ -29,6 +29,7 @@ function checkRegExp(str1){
     console.log(`spcialChar = ${expTest(SpcialChar,str1)}`);
 }
 
+
 function handleNickNameKeyUp(){
     checkRegExp(joinNickInput.value);
 }
