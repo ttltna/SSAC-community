@@ -20,7 +20,7 @@ fetch(url).then((response) => response.json()).then((data) => {
     }
 });
 
-function expTest(exp,str2){ //정규 표현식 test 함수
+function expTest(exp,str2){
     return exp.test(str2);
 }
 
