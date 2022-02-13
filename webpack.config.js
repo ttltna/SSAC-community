@@ -105,8 +105,12 @@ module.exports = (env, argv) => {
             // webpack config
             entry: {
                 main: `${JS_PATH}/index.js`,
-                component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`]
-            },
+                component: [`${JS_PATH}/Components/app.js`, `${JS_PATH}/Components/bpp.js`],
+                module: [`${JS_PATH}/new/board/evaluation.js`, `${JS_PATH}/new/board/general_forum.js`, `${JS_PATH}/new/board/recruit_project.js`,
+                        `${JS_PATH}/new/common/_common.js`, `${JS_PATH}/new/common/_header.js`, `${JS_PATH}/new/common/_reset.js`,
+                        `${JS_PATH}/new/guest/find_user.js`, `${JS_PATH}/new/guest/join.js`, `${JS_PATH}/new/guest/login.js`,
+                        `${JS_PATH}/new/user/my_page.js`, `${JS_PATH}/new/util/main.js`,`${JS_PATH}/new/util/succeed.js`]
+                                },
             output: {
                 filename: '[name].[chunkhash].bundle.js',
                 path: path.resolve(__dirname, 'dist'),

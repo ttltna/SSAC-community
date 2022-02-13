@@ -1,8 +1,3 @@
-window.onload = function(){
-    joinform.addEventListener("submit", handleSubmit);
-    joinNickInput.addEventListener("keyup",handleNickNameKeyUp);
-}
-
 const joinform = document.querySelector(".join_user-info");
 const joinNickInput = document.querySelector(".join_user-info__input-user-name");
 const nickCheck = document.querySelector(".join_user-info__id-status");
@@ -37,3 +32,12 @@ function handleNickNameKeyUp(){
 function handleSubmit(e){
     e.preventDefault();
 }
+
+
+
+const init = async () => {
+    // await joinform.addEventListener("submit", handleSubmit);
+    // await joinNickInput.addEventListener("keyup",handleNickNameKeyUp);
+}
+
+init()
