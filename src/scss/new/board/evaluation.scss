@@ -1,4 +1,166 @@
-.evaluation{
-    font-size: 42px;
-    color: rgb(24, 56, 104);
+
+.evaluate__wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 630px;
+    height: 561px;
+}
+
+.evaluate__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 630px;
+    height: 111px;
+    border-radius: 200px;
+    background-color: #F1F5F3;
+}
+
+.evaluate__img_frame {
+    position: absolute;
+    background-color: #5E847C;
+    width: 114px;
+    height: 111px;
+    border-radius: 10px;
+}
+
+.evaluate__item {
+    position: absolute;
+    margin-left: 197px;
+}
+
+.evaluate__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 8px 0;
+}
+
+.evaluate__details .detail {
+    font-size: 12px;
+}
+
+.evaluate__details .detail:first-child {
+    margin-right: 13px;
+}
+
+.evaluate__score {
+    margin-top: 8px;
+}
+
+.evaluate__reviews {
+    position: relative;
+    width: 590px;
+    height: 265px;
+    margin: 30px 20px 25px 20px;
+}
+
+.evaluate__reviews_count {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.evaluate__review {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 25px;
+}
+
+.evaluate__review_star {
+    width: 110px;
+    border: 1px solid black;
+    margin-right: 23px;
+}
+
+.evaluate__review_comment {
+    width: 349px
+}
+
+.evaluate__review_text {
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+
+.evaluate__review_time {
+    font-size: 10px;
+    color: #a8a8a8;
+}
+
+.evaluate__review_name {
+    font-size: 14px;
+    margin: 0 18px;
+}
+
+.evaluate__review_eval {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.evaluate__review_btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 94px;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.evaluate__write {
+    display: block;
+}
+
+.evaluate__write_wrap {
+    margin: 25px 0 0 20px;
+}
+
+.evaluate__score_title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.evaluate__score_wrap {
+    width: 610px;
+    height: 90px;
+    margin-top: 25px;
+}
+
+.evaluate__score {
+    width: 130px;
+    height: 35px;
+    border: none;
+    background: #eee;
+    border-radius: 50px;
+}
+
+.evaluate__write_txt {
+    width: 435px;
+    height: 35px;
+    border-radius: 100px;
+    margin-top: 12px;
+    background-color: #c8c8c8;
+    border: none;
+}
+
+.evaluate__write_che {
+    margin-left: 15px;
+}
+
+.evaluate__write_che_name {
+    font-size: 12px;
+}
+
+.evaluate__write_btn {
+    margin-left: 15px;
+    width: 88px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    background-color: #9dc1ba;
 }

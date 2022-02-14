@@ -1,5 +1,5 @@
 @charset "utf-8";
-// skip 
+ /* skip  */
 .skip,
 legend {
   width: 1px;
@@ -37,14 +37,15 @@ legend {
   text-align: center;
   text-decoration: none;
 }
-//skip end
+/* skip end */
 
-// common.css
+/* common.css */
 .wrap {
   width: 100%;
 }
 
-.inner{ //layout_margin(left,right)
+.inner{
+  /* layout_margin(left,right) */
     width: calc(100% - 1068px);
     margin: 0 auto;
 }
@@ -61,6 +62,7 @@ legend {
   height: 16px;
   background-repeat: 100%;
   background: #092D1E;
+  border-radius: 100%;
 }
 
 .input_radius {
@@ -79,4 +81,107 @@ legend {
   clear: both;
   width: 100%;
 }
-// common.css end
+
+/* 추가하고자 함 */
+.profile {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 24px 0 7px;
+  margin: 0;
+}
+
+.profile_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail_btn {
+  border: none;
+  background: none;
+  color: #c4c4c4;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* 자유게시판, project메인, 강의평가 메인 start*/
+.top_content_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top_title_and_search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 90px;
+  width: 630px;
+}
+
+.top_title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.top_search {
+  width: 197px;
+  height: 47px;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 50px;
+  // background-image: url(../img/icon-find.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+}
+
+.top_btn {
+  width: 88px;
+  height: 45px;
+  border-radius: 50px;
+  border: #9dc1ba;
+  background: #9dc1ba;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.top_btn:active {
+  background-color: #fff;
+  border: 4px solid #9dc1ba;
+}
+
+.top_text_list {
+  width: 925px;
+  height: 450px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* 스크롤바 크기 start */
+.top_text_list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* 스크롤바 배경 start */
+.top_text_list::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* 스크롤바 색상 */
+.top_text_list::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 5px;
+}
+
+/* 자유게시판, project메인, 강의평가 메인 end */
+/* common.css end */

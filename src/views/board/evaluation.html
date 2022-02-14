@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SSAC || </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
+
 <body>
-    <h1 class="evaluation">hello, Bigdoor-</h1>
+    <div class="wrap">
+        <input type="checkbox" id="sidebar">
+        <!-- 헤더 네비게이션 start-->
+        <header>
+            <div class="header_btn">
+                <a href="./index.html" class="home_btn">
+                    <i class="fas fa-home fa-2x"></i>
+                </a>
+                <a href="./guest/login.html" class="my_page">
+                    <i class="fas fa-user fa-2x" style="user-select: auto;"></i>
+                </a>
+                <label for="sidebar" class="menu open_label">
+                    <i class="fas fa-bars fa-2x"></i>
+                </label>
+            </div>
+        </header>
+        <!-- 사이드바 메뉴 start-->
+        <div class="sidebar_content">
+            <ul class="sidebar_wrap">
+                <li class="sidebar_list">
+                    <ul class="sidebar_btns">
+                        <li class="sidebar_btn"><a href=""><i class="fas fa-user fa-2x"
+                                    style="user-select: auto;"></i></a></li>
+                        <li class="sidebar_btn">
+                            <label for="closeBtn" class="close_label">
+                                <i class="fas fa-times fa-2x" style="user-select: auto;"></i>
+                            </label>
+                            <input type="checkbox" id="closeBtn" class="close_btn">
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar_list"><a href="#">자유게시판</a></li>
+                <li class="sidebar_list"><a href="#">PROJECT</a></li>
+                <li class="sidebar_list"><a href="#">강의평가</a></li>
+                <li class="bottom">
+                    <div>Team BigDoor</div>
+                    <a href="#">
+                        <img src="" alt="팀 로고">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- <label for="sidebar"></label> -->
+        <!-- 사이드바 메뉴 end-->
+
+        <!-- 메뉴 눌렀을때 배경부분 어두운 색으로 바뀌는 영역 -->
+        <div class="background"></div>
+        <!--  메뉴 눌렀을때 배경부분 영역 -->
+
+        <!-- inner start -->
+        <div class="inner">
+            <div class="evaluate__wrap">
+                <div class="evaluate__top">
+                    <div class="evaluate__img_frame">
+                        <!--(초록색 네모에)이미지 넣기-->
+                    </div>
+                    <ul class="evaluate__item">
+                        <li class="evaluate__title">기업연계형 퍼블리싱/프론트앤드 과정</li>
+                        <li class="evaluate__details">
+                            <span class="detail">금천캠퍼스</span>
+                            <span class="detail">강사: 박도어</span>
+                        </li>
+                        <li class="evaluate__score"> 별점 이미지 </li>
+                    </ul>
+                </div>
+                <div class="evaluate__reviews">
+                    <div class="evaluate__reviews_count">리뷰 (23)</div>
+                    <ul>
+                        <li class="evaluate__review">
+                            <img src="" alt="별점" class="evaluate__review_star">
+                            <div class="evaluate__review_comment">
+                                <p class="evaluate__review_text">강사님 바뀌고 좋아졌습니다~</p>
+                                <span class="evaluate__review_time">2022.02.06 18:53 |</span>
+                                <span class="evaluate__review_eval"><i class="fa-solid fa-thumbs-up"></i>4</span>
+                                <span></span>
+                            </div>
+                            <span class="evaluate__review_name">익명</span>
+                            <button class="detail_btn">• • •</button>
+                        </li>
+                        <li class="evaluate__review">
+                            <img src="" alt="별점" class="evaluate__review_star">
+                            <div class="evaluate__review_comment">
+                                <p class="evaluate__review_text">강사님 바뀌고 좋아졌습니다~</p>
+                                <span class="evaluate__review_time">2022.02.06 18:53 |</span>
+                                <span class="evaluate__review_eval"><i class="fa-solid fa-thumbs-up"></i>4</span>
+                            </div>
+                            <span class="evaluate__review_name">익명</span>
+                            <button class="detail_btn">• • •</button>
+                        </li>
+                        <li class="evaluate__review">
+                            <img src="" alt="별점" class="evaluate__review_star">
+                            <div class="evaluate__review_comment">
+                                <p class="evaluate__review_text">강사님 바뀌고 좋아졌습니다~</p>
+                                <span class="evaluate__review_time">2022.02.06 18:53 |</span>
+                                <span class="evaluate__review_eval"><i class="fa-solid fa-thumbs-up"></i>4</span>
+                            </div>
+                            <span class="evaluate__review_name">익명</span>
+                            <button class="detail_btn">• • •</button>
+                        </li>
+                    </ul>
+                    <button class="evaluate__review_btn">더보기</button>
+                </div>
+                <div class="evaluate__write_wrap">
+                    <div class="evaluate__score_title">글쓰기</div>
+                    <form action="" id="evaluate__write" name="evaluate__write" class="evaluate__score_wrap">
+                        <fielset form="evaluate__write_score" class="">
+                            <legend>별점</legend>
+                            <select name="evaluate__score" class="evaluate__score">
+                                <option value="star5">별5개</option>
+                                <option value="star4">별4개</option>
+                                <option value="star3">별3개</option>
+                                <option value="star2">별2개</option>
+                                <option value="star1">별1개</option>
+                            </select>
+                        </fielset>
+                        <fieldset name="evaluate__write">
+                            <legend>글작성</legend>
+                            <input type="text" class="evaluate__write_txt">
+                            <input type="checkbox" class="evaluate__write_che"><span
+                                class="evaluate__write_che_name">익명</span>
+                            <button type="submit" class="evaluate__write_btn">제출</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

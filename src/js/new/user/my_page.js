@@ -19,15 +19,15 @@ const setCampus = (data) => {
 
 // const setProcess = () => {};
 
-const firstinit = (e) => {
+const firstinit = () => {
     fetch(page_url)
     .then((res) => res.json())
     .then((data) => {
-        // console.log(data);
-        _userName.placeholder = data[0].nickname;
+        console.log(data);
+        _userName.placeholder=data[0].nickname;
     setCampus(data);
     
-        // setProcess();
+    // setProcess();
 
     })
     .catch((err) => console.log(err));

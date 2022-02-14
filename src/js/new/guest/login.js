@@ -3,7 +3,6 @@ const _get = (target) => {
   return document.querySelector(target);
 }
 const _formBox = _get('.login__form');
-
 // 변수설정
 
 
@@ -41,13 +40,9 @@ const _bindLoginBtn = () => {
   _formBox.addEventListener('submit', _login)
 }
 
-const main = () => {
-  // 버튼연결
-  _bindLoginBtn()
-}
 
 const init = () => {
-  window.addEventListener('DOMContentLoaded', main);
+    _bindLoginBtn()
 }
 
 init();
